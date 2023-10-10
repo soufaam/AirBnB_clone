@@ -15,6 +15,23 @@ class BaseModel:
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != '__class__':
+                    if key in ['created_at', 'updated_at']:
+                        fformat = '%Y-%m-%dT%H:%M:%S.%f'
+                        """convert the string values to datetime objects"""
+                        value = datetime.strptime(value, fformat)
+                    setattr(self, key, value)
+                    """ ^^^this is like self.key = value
+                    and this line solves the purpose of
+                    each value of this dictionary is the value of
+                    this attribute name
+                    """
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         class_name = self.__class__.__name__
