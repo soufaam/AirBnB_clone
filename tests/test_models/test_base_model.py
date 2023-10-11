@@ -2,21 +2,63 @@
 """This is unist test for test Base model"""
 
 import unittest
-import models.base_model
+from models.base_model import BaseModel
+import datetime
+
 
 class Test_Base_Model(unittest.TestCase):
-    def test_base_model(self):
-        self.assertEqual()
+    """This is Test class"""
 
+    def test_base_model_datetime_created_at(self):
+        """test the type of created_at attr"""
 
-my_model = models.base_model.BaseModel()
-my_model.name = "My First Model"
-my_model.my_number = 89
-print(my_model)
-my_model.save()
-print(my_model)
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
+        base_model = BaseModel()
+        self.assertTrue(isinstance(base_model.created_at, datetime.datetime))
+
+    def test_base_model_datetime_updated_at(self):
+        """test the type of update_at attr"""
+
+        base_model = BaseModel()
+        self.assertTrue(isinstance(base_model.updated_at, datetime.datetime))
+
+    def test_base_model_id(self):
+        """test the type of id"""
+
+        base_model = BaseModel()
+        self.assertTrue(isinstance(base_model.id, str))
+
+    def test_base_model_new_attr1(self):
+        """test new attr"""
+
+        base_model = BaseModel()
+        base_model.name = "AIRBnb console"
+        self.assertEqual(base_model.name, "AIRBnb console")
+
+    def test_base_model_modify_datetime(self):
+        """modify create_at and update_at"""
+
+        base_model = BaseModel(name="ALX", )
+        now = datetime.datetime.now()
+        base_model.created_at = now
+        base_model.updated_at = now
+        self.assertEqual(base_model.created_at, base_model.updated_at)
+
+    def test_base_model_new_attr2(self):
+        """create object using the class with kwargs"""
+
+        base_model = BaseModel(name="ALX")
+        self.assertEqual(base_model.name, "ALX")
+
+    def test_base_model_dict(self):
+        """test to_dic method"""
+
+        base_model = BaseModel(name="ALX")
+        dic = base_model.to_dict()
+        self.assertTrue(isinstance(dic, dict))
+
+    def test_base_model_dict2(self):
+        """test key value of the return value of to_dic"""
+
+        base_model = BaseModel(name="ALX")
+        dic = base_model.to_dict()
+        self.assertTrue(dic['__class__'] == BaseModel.__name__)
