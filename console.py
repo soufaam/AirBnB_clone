@@ -3,7 +3,7 @@
 import cmd
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
-import cmd
+import models
 
 
 class HBNBCommand(cmd.Cmd):
@@ -25,6 +25,40 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         'An empty line + ENTER shouldn’t execute anything'
         pass
+
+    def do_create(self, line):
+        """create: Creates a new instance of BaseModel,
+        saves it (to the JSON file) and prints the id. Ex: $ create BaseModel"""
+
+        if not line:
+            print("** class name missing **")
+        if line != BaseModel.__name__:
+            print("** class doesn't exist **")
+        else:
+            basemodel = BaseModel()
+            basemodel.save()
+            print(basemodel.id)
+
+    def do_show(self, line):
+        """Prints the string representation of an
+        instance based on the class name and id. Ex: $ sho"""
+
+        commands = line.split()
+        if commands == []:
+            print("** class name missing **")
+            return
+        elif commands[0] != BaseModel.__name__:
+            print("** class doesn't exist **")
+            return
+        if len(commands) != 2:
+            print("** instance id missing **")
+            return
+        models.storage.reload()
+        key = f'{BaseModel.__name__}.{commands[1]}'
+        if key not in models.storage.all().keys():
+            print(f"** no instance found **")
+        else:
+            print(f"{models.storage.all()[key]}")
 
 
 if __name__ == '__main__':
