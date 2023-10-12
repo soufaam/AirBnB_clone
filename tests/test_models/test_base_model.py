@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is unist test for test Base model"""
+"""This is unit test for test Base model"""
 
 import unittest
 from models.base_model import BaseModel
@@ -8,6 +8,37 @@ import datetime
 
 class Test_Base_Model(unittest.TestCase):
     """This is Test class"""
+    def test_base_model_id(self):
+        """Check if the id is string"""
+
+        base_model = BaseModel()
+        self.assertTrue(isinstance(base_model.id, str))
+
+    def test_base_mode_len_of_id(self):
+        """Ensure id is a uuid4 string (len == 36)"""
+
+        base_model1 = BaseModel()
+        self.assertEqual(len(base_model1.id), 36)
+
+    def test_base_model_tow_diff_ids(self):
+        """Inequality of two different objects ids"""
+
+        base_model1 = BaseModel()
+        base_model2 = BaseModel()
+        self.assertTrue(base_model1.id != base_model2.id)
+
+    def test_base_model_tow_diff_instances(self):
+        """Inequality of two instances of BaseModel"""
+
+        base_model1 = BaseModel()
+        base_model2 = BaseModel()
+        self.assertTrue(base_model1 != base_model2)
+
+    def test_base_model_if_instance(self):
+        """Inequality of two instances of BaseModel"""
+
+        base_model1 = BaseModel()
+        self.assertTrue(isinstance(base_model1, BaseModel))
 
     def test_base_model_datetime_created_at(self):
         """test the type of created_at attr"""
@@ -15,17 +46,18 @@ class Test_Base_Model(unittest.TestCase):
         base_model = BaseModel()
         self.assertTrue(isinstance(base_model.created_at, datetime.datetime))
 
+    def test_base_model_datetime_now_(self):
+        """Check if the created time is always less than the current time."""
+
+        base_model = BaseModel()
+        self.assertLess(base_model.created_at.timestamp(),
+                        datetime.datetime.now().timestamp())
+
     def test_base_model_datetime_updated_at(self):
         """test the type of update_at attr"""
 
         base_model = BaseModel()
         self.assertTrue(isinstance(base_model.updated_at, datetime.datetime))
-
-    def test_base_model_id(self):
-        """test the type of id"""
-
-        base_model = BaseModel()
-        self.assertTrue(isinstance(base_model.id, str))
 
     def test_base_model_new_attr1(self):
         """test new attr"""
@@ -62,3 +94,40 @@ class Test_Base_Model(unittest.TestCase):
         base_model = BaseModel(name="ALX")
         dic = base_model.to_dict()
         self.assertTrue(dic['__class__'] == BaseModel.__name__)
+
+    def test_base_model_str_(self):
+        """test key value of the return value of to_dic"""
+
+        base_model = BaseModel(name="ALX")
+        result1 = base_model.__str__()
+        result2 = f"[{BaseModel.__name__}] \
+({base_model.id}) {base_model.__dict__}"
+        self.assertEqual(result1, result2)
+
+    def test_base_model_save_method(self):
+        """Check the inequality of created_at and updated_at
+        attributes after using the save(self) method"""
+
+        base_model = BaseModel(name="ALX")
+        base_model.save()
+        self.assertLess(base_model.created_at.timestamp(),
+                        base_model.updated_at.timestamp())
+
+    def test_base_model_iso_format(self):
+        """Check the inequality of created_at and updated_at
+        attributes after using the save(self) method"""
+
+        base_model = BaseModel(name="ALX")
+        base_model.save()
+        self.assertLess(base_model.created_at.timestamp(),
+                        base_model.updated_at.timestamp())
+
+    def test_base_model_from_iso(self):
+        """Check if the created_at and updated_at are in the
+        “%Y-%m-%dT%H:%M:%S.%f” ISO format in the dictionary
+        returned from to_dict method"""
+
+        base_model = BaseModel(name="ALX")
+        dic = base_model.to_dict()
+        self.assertIsNotNone(
+            datetime.datetime.fromisoformat(dic['created_at']))
