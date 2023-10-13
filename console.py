@@ -3,11 +3,12 @@
 import cmd
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
+import models
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-    console.py that contains the
+
+    """console.py that contains the
     entry point of the command interpreter
     """
 
@@ -24,6 +25,63 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         'An empty line + ENTER shouldn’t execute anything'
         pass
+
+    def do_create(self, line):
+        """create: Creates a new instance of BaseModel,
+        saves it (to the JSON file) and prints the id.
+        Ex: $ create BaseModel"""
+
+        if not line:
+            print("** class name missing **")
+        if line != BaseModel.__name__:
+            print("** class doesn't exist **")
+        else:
+            basemodel = BaseModel()
+            basemodel.save()
+            print(basemodel.id)
+
+    def do_show(self, line):
+        """Prints the string representation of an
+        instance based on the class name and id. Ex: $ sho"""
+
+        commands = line.split()
+        if commands == []:
+            print("** class name missing **")
+            return
+        elif commands[0] != BaseModel.__name__:
+            print("** class doesn't exist **")
+            return
+        if len(commands) != 2:
+            print("** instance id missing **")
+            return
+        models.storage.reload()
+        key = f'{BaseModel.__name__}.{commands[1]}'
+        if key not in models.storage.all().keys():
+            print(f"** no instance found **")
+        else:
+            print(f"{models.storage.all()[key]}")
+
+    def do_destroy(self, line):
+        """Deletes an instance based on the class
+        name and id (save the change into the JSON file)"""
+
+        commands = line.split()
+        if commands == []:
+            print("** class name missing **")
+            return
+        elif commands[0] != BaseModel.__name__:
+            print("** class doesn't exist **")
+            return
+        if len(commands) != 2:
+            print("** instance id missing **")
+            return
+        models.storage.reload()
+        key = f'{BaseModel.__name__}.{commands[1]}'
+        if key not in models.storage.all().keys():
+            print(f"** no instance found **")
+        else:
+            del models.storage.all()[key]
+            models.storage.save()
 
 
 if __name__ == '__main__':

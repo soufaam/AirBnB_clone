@@ -1,0 +1,260 @@
+{
+	"BaseModel.f1fe2a64-0900-4601-9a24-67f8d9af74c0": {
+		"id": "f1fe2a64-0900-4601-9a24-67f8d9af74c0",
+		"created_at": "2023-10-12T12:25:33.615026",
+		"updated_at": "2023-10-12T12:25:33.615028",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.61190436-ff94-48b0-8a14-d6a89ae5e3c5": {
+		"id": "61190436-ff94-48b0-8a14-d6a89ae5e3c5",
+		"created_at": "2023-10-12T12:25:33.615324",
+		"updated_at": "2023-10-12T12:25:33.615337",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.0c8ab596-687d-4007-99b6-6d6e6a877555": {
+		"id": "0c8ab596-687d-4007-99b6-6d6e6a877555",
+		"created_at": "2023-10-12T12:25:33.615595",
+		"updated_at": "2023-10-12T12:25:33.615596",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.40a3f8d5-d58e-490f-bf71-3943bd06b2aa": {
+		"id": "40a3f8d5-d58e-490f-bf71-3943bd06b2aa",
+		"created_at": "2023-10-12T12:25:33.615779",
+		"updated_at": "2023-10-12T12:25:33.615781",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.b367c7c3-7a36-4db8-a664-a57ee63f3159": {
+		"id": "b367c7c3-7a36-4db8-a664-a57ee63f3159",
+		"created_at": "2023-10-12T12:25:33.616379",
+		"updated_at": "2023-10-12T12:25:33.616381",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.7597369f-a2ac-4380-95fb-4ce3fbd9500d": {
+		"id": "7597369f-a2ac-4380-95fb-4ce3fbd9500d",
+		"created_at": "2023-10-12T12:25:33.616563",
+		"updated_at": "2023-10-12T12:25:33.616565",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.7dd68390-0c60-4899-8cac-9543254c1795": {
+		"id": "7dd68390-0c60-4899-8cac-9543254c1795",
+		"created_at": "2023-10-12T12:25:33.616912",
+		"updated_at": "2023-10-12T12:25:33.616914",
+		"name": "AIRBnb console",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.01cb69f7-034a-47b3-9248-f7f08274bddf": {
+		"id": "01cb69f7-034a-47b3-9248-f7f08274bddf",
+		"created_at": "2023-10-12T12:26:34.115954",
+		"updated_at": "2023-10-12T12:26:34.115955",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.8d528fae-b5f8-463e-b660-026c66134f01": {
+		"id": "8d528fae-b5f8-463e-b660-026c66134f01",
+		"created_at": "2023-10-12T12:26:34.116050",
+		"updated_at": "2023-10-12T12:26:34.116051",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.5c1f2632-36be-4564-beaf-ddcbf0a7205e": {
+		"id": "5c1f2632-36be-4564-beaf-ddcbf0a7205e",
+		"created_at": "2023-10-12T12:26:34.116114",
+		"updated_at": "2023-10-12T12:26:34.116114",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.f1f2fa40-9558-4c17-ac8e-6f75ad714405": {
+		"id": "f1f2fa40-9558-4c17-ac8e-6f75ad714405",
+		"created_at": "2023-10-12T12:26:34.116175",
+		"updated_at": "2023-10-12T12:26:34.116176",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.0efefe79-41c9-44a2-a418-fca2ca97cb75": {
+		"id": "0efefe79-41c9-44a2-a418-fca2ca97cb75",
+		"created_at": "2023-10-12T12:26:34.116375",
+		"updated_at": "2023-10-12T12:26:34.116376",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.11df562d-0d0b-4c6c-a3f4-a420fc871940": {
+		"id": "11df562d-0d0b-4c6c-a3f4-a420fc871940",
+		"created_at": "2023-10-12T12:26:34.116469",
+		"updated_at": "2023-10-12T12:26:34.116470",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.58cc7a3b-f105-45ae-b771-d61a60ff6606": {
+		"id": "58cc7a3b-f105-45ae-b771-d61a60ff6606",
+		"created_at": "2023-10-12T12:26:34.116656",
+		"updated_at": "2023-10-12T12:26:34.116657",
+		"name": "AIRBnb console",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.d033234e-e7cf-4480-9bb5-08a717d6adce": {
+		"id": "d033234e-e7cf-4480-9bb5-08a717d6adce",
+		"created_at": "2023-10-12T12:35:06.310675",
+		"updated_at": "2023-10-12T12:35:06.310676",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.bb8c57bf-06a5-47ca-855e-ec05850cd5f8": {
+		"id": "bb8c57bf-06a5-47ca-855e-ec05850cd5f8",
+		"created_at": "2023-10-12T12:35:06.310772",
+		"updated_at": "2023-10-12T12:35:06.310773",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.9d1bfa51-a090-429d-a935-e80ca2346155": {
+		"id": "9d1bfa51-a090-429d-a935-e80ca2346155",
+		"created_at": "2023-10-12T12:35:06.310858",
+		"updated_at": "2023-10-12T12:35:06.310859",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.98cf6dab-7ea3-40ff-b976-d11426d6ef7c": {
+		"id": "98cf6dab-7ea3-40ff-b976-d11426d6ef7c",
+		"created_at": "2023-10-12T12:35:06.310954",
+		"updated_at": "2023-10-12T12:35:06.310956",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.db6a6ee4-1843-43c9-9f47-8707a35b6dee": {
+		"id": "db6a6ee4-1843-43c9-9f47-8707a35b6dee",
+		"created_at": "2023-10-12T12:35:06.311267",
+		"updated_at": "2023-10-12T12:35:06.311268",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.31dfb868-d852-4077-9505-af95e40d6081": {
+		"id": "31dfb868-d852-4077-9505-af95e40d6081",
+		"created_at": "2023-10-12T12:35:06.311369",
+		"updated_at": "2023-10-12T12:35:06.311371",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.86639d4c-0915-4b4b-b849-0a51078be101": {
+		"id": "86639d4c-0915-4b4b-b849-0a51078be101",
+		"created_at": "2023-10-12T12:35:06.311556",
+		"updated_at": "2023-10-12T12:35:06.311557",
+		"name": "AIRBnb console",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.e0fbf7bc-8ee2-451b-b04f-b2b6ced728b8": {
+		"id": "e0fbf7bc-8ee2-451b-b04f-b2b6ced728b8",
+		"created_at": "2023-10-12T13:16:25.927922",
+		"updated_at": "2023-10-12T13:16:25.927922",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.ce9e56f9-15c8-42b0-acad-8269338cd0fd": {
+		"id": "ce9e56f9-15c8-42b0-acad-8269338cd0fd",
+		"created_at": "2023-10-12T13:16:25.928015",
+		"updated_at": "2023-10-12T13:16:25.928015",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.4c40e9bd-0119-4317-8ad8-c73a57a82e73": {
+		"id": "4c40e9bd-0119-4317-8ad8-c73a57a82e73",
+		"created_at": "2023-10-12T13:16:25.928083",
+		"updated_at": "2023-10-12T13:16:25.928084",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.1c9a0903-8d7f-445a-a7cf-ee49bcb04cf8": {
+		"id": "1c9a0903-8d7f-445a-a7cf-ee49bcb04cf8",
+		"created_at": "2023-10-12T13:16:25.928147",
+		"updated_at": "2023-10-12T13:16:25.928147",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.6c901cc3-2eb4-4b77-a05c-eed425d7afba": {
+		"id": "6c901cc3-2eb4-4b77-a05c-eed425d7afba",
+		"created_at": "2023-10-12T13:16:25.928624",
+		"updated_at": "2023-10-12T13:16:25.928624",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.a06425b6-3f50-410b-9cee-45e7ed395ef4": {
+		"id": "a06425b6-3f50-410b-9cee-45e7ed395ef4",
+		"created_at": "2023-10-12T13:16:25.928684",
+		"updated_at": "2023-10-12T13:16:25.928685",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.95bab29f-ac94-4a98-bb8e-6deca46df1e8": {
+		"id": "95bab29f-ac94-4a98-bb8e-6deca46df1e8",
+		"created_at": "2023-10-12T13:16:25.930075",
+		"updated_at": "2023-10-12T13:16:25.930076",
+		"name": "AIRBnb console",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.0251fe51-41cc-4c66-9071-360a99930dcd": {
+		"id": "0251fe51-41cc-4c66-9071-360a99930dcd",
+		"created_at": "2023-10-12T13:19:14.881323",
+		"updated_at": "2023-10-12T13:19:14.881324",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.d9b0b6b5-885c-4960-9905-0e0af069fbd3": {
+		"id": "d9b0b6b5-885c-4960-9905-0e0af069fbd3",
+		"created_at": "2023-10-12T13:19:14.881419",
+		"updated_at": "2023-10-12T13:19:14.881420",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.d02fceee-e924-4fda-b736-afe87cb895ef": {
+		"id": "d02fceee-e924-4fda-b736-afe87cb895ef",
+		"created_at": "2023-10-12T13:19:14.881500",
+		"updated_at": "2023-10-12T13:19:14.881500",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.f8a699df-69a9-4114-a1dd-b3ebb82e07fa": {
+		"id": "f8a699df-69a9-4114-a1dd-b3ebb82e07fa",
+		"created_at": "2023-10-12T13:19:14.881594",
+		"updated_at": "2023-10-12T13:19:14.881595",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.f8d0d3c7-23e4-425c-8983-c433fc013c61": {
+		"id": "f8d0d3c7-23e4-425c-8983-c433fc013c61",
+		"created_at": "2023-10-12T13:19:14.882183",
+		"updated_at": "2023-10-12T13:19:14.882184",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.413903c8-1ab0-455f-a02e-a603a40113dc": {
+		"id": "413903c8-1ab0-455f-a02e-a603a40113dc",
+		"created_at": "2023-10-12T13:19:14.882282",
+		"updated_at": "2023-10-12T13:19:14.882283",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.971cbfcf-f799-4dce-9676-72f72620de10": {
+		"id": "971cbfcf-f799-4dce-9676-72f72620de10",
+		"created_at": "2023-10-12T13:19:14.883738",
+		"updated_at": "2023-10-12T13:19:14.883739",
+		"name": "AIRBnb console",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.d1694070-b079-4b6b-8c96-f2460c2df036": {
+		"id": "d1694070-b079-4b6b-8c96-f2460c2df036",
+		"created_at": "2023-10-12T13:21:24.701449",
+		"updated_at": "2023-10-12T13:21:24.701450",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.21624e9f-7f33-4fa9-b915-e33aded73cff": {
+		"id": "21624e9f-7f33-4fa9-b915-e33aded73cff",
+		"created_at": "2023-10-12T13:21:24.701547",
+		"updated_at": "2023-10-12T13:21:24.701548",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.e88c6ce9-264d-4ea1-b120-1dd7a7a10b03": {
+		"id": "e88c6ce9-264d-4ea1-b120-1dd7a7a10b03",
+		"created_at": "2023-10-12T13:21:24.701636",
+		"updated_at": "2023-10-12T13:21:24.701637",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.b21e5e95-5098-40ba-91d4-5e64aec1dbd4": {
+		"id": "b21e5e95-5098-40ba-91d4-5e64aec1dbd4",
+		"created_at": "2023-10-12T13:21:24.701706",
+		"updated_at": "2023-10-12T13:21:24.701706",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.99bdeb48-a3e2-4815-bd55-f5d8ea59f8e1": {
+		"id": "99bdeb48-a3e2-4815-bd55-f5d8ea59f8e1",
+		"created_at": "2023-10-12T13:21:24.702013",
+		"updated_at": "2023-10-12T13:21:24.702014",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.b237f9f3-82ee-42ea-a58f-85844c385ae1": {
+		"id": "b237f9f3-82ee-42ea-a58f-85844c385ae1",
+		"created_at": "2023-10-12T13:21:24.702132",
+		"updated_at": "2023-10-12T13:21:24.702134",
+		"__class__": "BaseModel"
+	},
+	"BaseModel.f02e74c2-cda9-4c88-b84b-3b5a504277b2": {
+		"id": "f02e74c2-cda9-4c88-b84b-3b5a504277b2",
+		"created_at": "2023-10-12T13:21:24.703904",
+		"updated_at": "2023-10-12T13:21:24.703904",
+		"name": "AIRBnb console",
+		"__class__": "BaseModel"
+	}
+}
