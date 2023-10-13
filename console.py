@@ -44,7 +44,7 @@ class HBNBCommand(cmd.Cmd):
         if line not in self.classes.keys():
             print("** class doesn't exist **")
         else:
-            basemodel = self.classes['line']()
+            basemodel = self.classes[line]()
             basemodel.save()
             print(basemodel.id)
 
@@ -62,7 +62,7 @@ class HBNBCommand(cmd.Cmd):
         if len(commands) != 2:
             print("** instance id missing **")
             return
-        models.storage.reload()
+        """models.storage.reload()"""
         key = f'{commands[0]}.{commands[1]}'
         print(key)
         if key not in models.storage.all().keys():
