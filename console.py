@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""This is  the Entry Point"""
+"""
+This is  the Entry Point module
+"""
 import cmd
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
@@ -23,11 +25,15 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
-        'Quit command to exit the program\n'
+        """
+        Quit command to exit the program\n
+        """
         return True
 
     def do_EOF(self, line):
-        'EOF command to exit the program'
+        """
+        EOF command to exit the program
+        """
         return True
 
     def emptyline(self):
@@ -35,9 +41,11 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, line):
-        """create: Creates a new instance of BaseModel,
+        """
+        create: Creates a new instance of BaseModel,
         saves it (to the JSON file) and prints the id.
-        Ex: $ create BaseModel"""
+        Ex: $ create BaseModel
+        """
 
         if not line:
             print("** class name missing **")
@@ -49,8 +57,10 @@ class HBNBCommand(cmd.Cmd):
             print(basemodel.id)
 
     def do_show(self, line):
-        """Prints the string representation of an
-        instance based on the class name and id. Ex: $ sho"""
+        """
+        Prints the string representation of an
+        instance based on the class name and id
+        """
 
         commands = line.split()
         if commands == []:
@@ -71,8 +81,10 @@ class HBNBCommand(cmd.Cmd):
             print(f"{models.storage.all()[key]}")
 
     def do_destroy(self, line):
-        """Deletes an instance based on the class
-        name and id (save the change into the JSON file)"""
+        """
+        Deletes an instance based on the class
+        name and id (save the change into the JSON file)
+        """
 
         commands = line.split()
         if commands == []:
@@ -93,9 +105,11 @@ class HBNBCommand(cmd.Cmd):
             models.storage.save()
 
     def do_all(self, line):
-        """: Prints all string representation of all
+        """
+        Prints all string representation of all
         instances based or not on the class name. Ex:
-        $ all BaseModel or $ all"""
+        $ all BaseModel or $ all
+        """
 
         commands = line.split()
         lst = []
@@ -117,7 +131,8 @@ class HBNBCommand(cmd.Cmd):
         and id by adding or updating attribute
         (save the change into the JSON file).
         Ex: $ update BaseModel 1234-1234-1234 email
-        "aibnb@mail.com"."""
+        "aibnb@mail.com".
+        """
 
         commands = line.split()
         if commands == []:

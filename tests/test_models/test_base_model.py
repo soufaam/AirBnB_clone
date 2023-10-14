@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""This is unit test for test Base model"""
+"""
+This is unit test for test Base model
+"""
 
 import unittest
 from models.base_model import BaseModel
@@ -7,67 +9,89 @@ import datetime
 
 
 class Test_Base_Model(unittest.TestCase):
-    """This is Test class"""
+    """
+    This is Test class
+    """
     def test_base_model_id(self):
-        """Check if the id is string"""
+        """
+        Check if the id is string
+        """
 
         base_model = BaseModel()
         self.assertTrue(isinstance(base_model.id, str))
 
     def test_base_mode_len_of_id(self):
-        """Ensure id is a uuid4 string (len == 36)"""
+        """
+        Ensure id is a uuid4 string (len == 36)
+        """
 
         base_model1 = BaseModel()
         self.assertEqual(len(base_model1.id), 36)
 
     def test_base_model_tow_diff_ids(self):
-        """Inequality of two different objects ids"""
+        """
+        Inequality of two different objects ids
+        """
 
         base_model1 = BaseModel()
         base_model2 = BaseModel()
         self.assertTrue(base_model1.id != base_model2.id)
 
     def test_base_model_tow_diff_instances(self):
-        """Inequality of two instances of BaseModel"""
+        """
+        Inequality of two instances of BaseModel
+        """
 
         base_model1 = BaseModel()
         base_model2 = BaseModel()
         self.assertTrue(base_model1 != base_model2)
 
     def test_base_model_if_instance(self):
-        """Inequality of two instances of BaseModel"""
+        """
+        Inequality of two instances of BaseModel
+        """
 
         base_model1 = BaseModel()
         self.assertTrue(isinstance(base_model1, BaseModel))
 
     def test_base_model_datetime_created_at(self):
-        """test the type of created_at attr"""
+        """
+        test the type of created_at attr
+        """
 
         base_model = BaseModel()
         self.assertTrue(isinstance(base_model.created_at, datetime.datetime))
 
     def test_base_model_datetime_now_(self):
-        """Check if the created time is always less than the current time."""
+        """
+        Check if the created time is always less than the current time.
+        """
 
         base_model = BaseModel()
         self.assertLess(base_model.created_at.timestamp(),
                         datetime.datetime.now().timestamp())
 
     def test_base_model_datetime_updated_at(self):
-        """test the type of update_at attr"""
+        """
+        test the type of update_at attr
+        """
 
         base_model = BaseModel()
         self.assertTrue(isinstance(base_model.updated_at, datetime.datetime))
 
     def test_base_model_new_attr1(self):
-        """test new attr"""
+        """
+        test new attr
+        """
 
         base_model = BaseModel()
         base_model.name = "AIRBnb console"
         self.assertEqual(base_model.name, "AIRBnb console")
 
     def test_base_model_modify_datetime(self):
-        """modify create_at and update_at"""
+        """
+        modify create_at and update_at
+        """
 
         base_model = BaseModel(name="ALX", )
         now = datetime.datetime.now()
@@ -76,27 +100,35 @@ class Test_Base_Model(unittest.TestCase):
         self.assertEqual(base_model.created_at, base_model.updated_at)
 
     def test_base_model_new_attr2(self):
-        """create object using the class with kwargs"""
+        """
+        create object using the class with kwargs
+        """
 
         base_model = BaseModel(name="ALX")
         self.assertEqual(base_model.name, "ALX")
 
     def test_base_model_dict(self):
-        """test to_dic method"""
+        """
+        test to_dic method
+        """
 
         base_model = BaseModel(name="ALX")
         dic = base_model.to_dict()
         self.assertTrue(isinstance(dic, dict))
 
     def test_base_model_dict2(self):
-        """test key value of the return value of to_dic"""
+        """
+        test key value of the return value of to_dic
+        """
 
         base_model = BaseModel(name="ALX")
         dic = base_model.to_dict()
         self.assertTrue(dic['__class__'] == BaseModel.__name__)
 
     def test_base_model_str_(self):
-        """test key value of the return value of to_dic"""
+        """
+        test key value of the return value of to_dic
+        """
 
         base_model = BaseModel(name="ALX")
         result1 = base_model.__str__()
@@ -105,8 +137,10 @@ class Test_Base_Model(unittest.TestCase):
         self.assertEqual(result1, result2)
 
     def test_base_model_save_method(self):
-        """Check the inequality of created_at and updated_at
-        attributes after using the save(self) method"""
+        """
+        Check the inequality of created_at and updated_at
+        attributes after using the save(self) method
+        """
 
         base_model = BaseModel(name="ALX")
         base_model.save()
@@ -114,8 +148,10 @@ class Test_Base_Model(unittest.TestCase):
                         base_model.updated_at.timestamp())
 
     def test_base_model_iso_format(self):
-        """Check the inequality of created_at and updated_at
-        attributes after using the save(self) method"""
+        """
+        Check the inequality of created_at and updated_at
+        attributes after using the save(self) method
+        """
 
         base_model = BaseModel(name="ALX")
         base_model.save()
@@ -123,9 +159,11 @@ class Test_Base_Model(unittest.TestCase):
                         base_model.updated_at.timestamp())
 
     def test_base_model_from_iso(self):
-        """Check if the created_at and updated_at are in the
+        """
+        Check if the created_at and updated_at are in the
         “%Y-%m-%dT%H:%M:%S.%f” ISO format in the dictionary
-        returned from to_dict method"""
+        returned from to_dict method
+        """
 
         base_model = BaseModel(name="ALX")
         dic = base_model.to_dict()

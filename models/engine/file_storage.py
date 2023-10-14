@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Store first object"""
+"""
+Store first object
+"""
 
 from os.path import isfile
 import json

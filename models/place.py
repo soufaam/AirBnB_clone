@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+"""
+PLACE Module that includes Place class
+"""
 import models
 from models.base_model import BaseModel
-"""PLACE"""
 
 
 class Place(BaseModel):
-    """place class"""
+    """
+    Place class
+    """
     city_id = ''
     user_id = ''
     name = ''
