@@ -157,6 +157,7 @@ class HBNBCommand(cmd.Cmd):
         key = f"{commands[0]}.{commands[1]}"
         setattr(models.storage.all()[key],
                 commands[2], commands[3])
+        models.storage.all()[key].save()
         models.storage.save()
 
 
