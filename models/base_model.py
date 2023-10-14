@@ -12,6 +12,11 @@ class BaseModel:
     """base"""
 
     def __init__(self, *args, **kwargs):
+        """__init__ method to initise the an object during its creation
+        Args:
+        *args: tuple of arguments
+        **kwags: key value variables"""
+
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
