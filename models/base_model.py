@@ -1,15 +1,16 @@
 #!/usr/bin/python3
+"""A module that include the parent class Basemodel"""
+
 import models
 from datetime import datetime
 from uuid import uuid4
-"""
-class BaseModel that defines all common attributes/methods
-for other classes.
-"""
 
 
 class BaseModel:
-    """base"""
+    """
+    class BaseModel that defines all common attributes/methods
+    for other classes.
+    """
 
     def __init__(self, *args, **kwargs):
         """__init__ method to initise the an object during its creation
