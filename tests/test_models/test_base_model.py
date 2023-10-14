@@ -10,7 +10,7 @@ import datetime
 
 class Test_Base_Model(unittest.TestCase):
     """
-    This is Test class
+    This is unittest class
     """
     def test_base_model_id(self):
         """
@@ -35,6 +35,24 @@ class Test_Base_Model(unittest.TestCase):
 
         base_model1 = BaseModel()
         base_model2 = BaseModel()
+        self.assertTrue(base_model1.id != base_model2.id)
+
+    def test_base_model_tow_diff_ids2(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        base_model1 = BaseModel(name="hlim")
+        base_model2 = BaseModel()
+        self.assertTrue(base_model1.id != base_model2.id)
+
+    def test_base_model_tow_diff_ids3(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        base_model1 = BaseModel(name="hlim")
+        base_model2 = BaseModel(name="hlim")
         self.assertTrue(base_model1.id != base_model2.id)
 
     def test_base_model_tow_diff_instances(self):
