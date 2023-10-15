@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Store first object"""
+"""
+file storage module to store object
+"""
+
 from os.path import isfile
 import json
 import models

@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""
+city module that includes City class
+"""
+
 import models
 from models.base_model import BaseModel
-"""City"""
 
 
 class City(BaseModel):

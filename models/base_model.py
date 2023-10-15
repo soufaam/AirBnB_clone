@@ -1,17 +1,27 @@
 #!/usr/bin/python3
+"""
+A module that include the parent class Basemodel
+"""
+
 import models
 from datetime import datetime
 from uuid import uuid4
-"""
-class BaseModel that defines all common attributes/methods
-for other classes.
-"""
 
 
 class BaseModel:
-    """base"""
+    """
+    class BaseModel that defines all common attributes/methods
+    for other classes.
+    """
 
     def __init__(self, *args, **kwargs):
+        """
+        __init__ method to initise the an object during its creation
+        Args:
+        *args: tuple of arguments
+        **kwags: key value variables
+        """
+
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
@@ -35,14 +45,18 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        """__str__: should print: [<class name>] (<self.id>) <self.__dict__>"""
+        """
+        __str__: should print: [<class name>] (<self.id>) <self.__dict__>
+        """
 
         class_name = self.__class__.__name__
         return "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
 
     def save(self):
-        """save(self): updates the public instance attribute
-        updated_at with the current datetime"""
+        """
+        save(self): updates the public instance attribute
+        updated_at with the current datetime
+        """
 
         self.updated_at = datetime.now()
         models.storage.save()
