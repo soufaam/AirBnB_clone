@@ -74,7 +74,6 @@ class HBNBCommand(cmd.Cmd):
             return
         """models.storage.reload()"""
         key = f'{commands[0]}.{commands[1]}'
-        print(key)
         if key not in models.storage.all().keys():
             print(f"** no instance found **")
         else:
@@ -158,6 +157,34 @@ class HBNBCommand(cmd.Cmd):
         setattr(models.storage.all()[key],
                 commands[2], commands[3])
         models.storage.all()[key].save()
+
+    def onecmd(self, line):
+        """ parseline() to create a tuple containing the command,"""
+
+        lst = []
+        class_name, command, line1 = cmd.Cmd.parseline(self, line)
+        if class_name in self.classes.keys():
+            if command == '.all()':
+                for key, val in models.storage.all().items():
+                    if class_name in key.split('.')[0]:
+                        lst.append(val.__str__())
+            print(lst)
+            return self.emptyline()
+        if not line1:
+            return self.emptyline()
+        if class_name is None:
+            return self.default(line1)
+        self.lastcmd = line1
+        if line == 'EOF':
+            self.lastcmd = ''
+        if class_name == '':
+            return self.default(line1)
+        else:
+            try:
+                func = getattr(self, 'do_' + class_name)
+            except AttributeError:
+                return self.default(line1)
+            return func(command)
 
 
 if __name__ == '__main__':

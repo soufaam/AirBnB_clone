@@ -61,7 +61,6 @@ class Test_Base_Model(unittest.TestCase):
         dic = models.storage.all()
         self.assertTrue(key in dic.keys())
 
-
     def test_state_subclass(self):
         """
         Inequality of two different objects ids
