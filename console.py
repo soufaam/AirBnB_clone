@@ -168,7 +168,33 @@ class HBNBCommand(cmd.Cmd):
                 for key, val in models.storage.all().items():
                     if class_name in key.split('.')[0]:
                         lst.append(val.__str__())
-            print(lst)
+                print(lst)
+            elif command == ".count()":
+                for key, val in models.storage.all().items():
+                    if class_name in key.split('.')[0]:
+                        lst.append(val.__str__())
+                print(len(lst))
+            elif '.show' in command:
+                arg_id = command.split('"')
+                if len(arg_id) == 3:
+                    key = f'{class_name}.{arg_id[1]}'
+                    if key not in models.storage.all().keys():
+                        print(f"** no instance found **")
+                    else:
+                        print(f"{models.storage.all()[key]}")
+                else:
+                    print("** instance id missing **")
+            elif '.destroy' in command:
+                arg_id = command.split('"')
+                if len(arg_id) == 3:
+                    key = f'{class_name}.{arg_id[1]}'
+                    if key not in models.storage.all().keys():
+                        print(f"** no instance found **")
+                    else:
+                        del models.storage.all()[key]
+                        models.storage.save()
+                else:
+                    print("** instance id missing **")
             return self.emptyline()
         if not line1:
             return self.emptyline()
