@@ -7,6 +7,7 @@ import unittest
 from models.base_model import BaseModel
 import datetime
 import models
+import os
 
 
 class Test_FileStorage(unittest.TestCase):
@@ -28,7 +29,7 @@ class Test_FileStorage(unittest.TestCase):
         obj = models.storage.all()[key]
         self.assertTrue(isinstance(obj, BaseModel))
 
-    def test_test_file_storage(self):
+    def test_test_file_storage1(self):
         """_summary_
         Check the equality of the created model
         and the model in the __objects attribute
@@ -69,3 +70,15 @@ class Test_FileStorage(unittest.TestCase):
         models.storage.save()
         key = f"BaseModel.{base.id}"
         self.assertTrue(key in models.storage.all().keys())
+
+    def test_test_file_new_object_dic_not_empty(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        base = BaseModel()
+        models.storage.new(base)
+        dic = models.storage.all()
+        self.assertTrue(dic != {})

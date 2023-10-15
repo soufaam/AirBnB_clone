@@ -8,6 +8,8 @@ from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 import datetime
 import models
+import os
+from pathlib import Path
 
 
 class Test_FileStorage(unittest.TestCase):
@@ -33,3 +35,16 @@ class Test_FileStorage(unittest.TestCase):
         key1 = f"BaseModel.{base1.id}"
         obj1 = test_stoge.all()[key1]
         self.assertTrue(isinstance(obj1, BaseModel))
+
+    def test_test_file_save_file_existence(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        base = BaseModel()
+        models.storage.new(base)
+        base.save()
+        print()
+        self.assertTrue(os.path.isfile("file.json"))

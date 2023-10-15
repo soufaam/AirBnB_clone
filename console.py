@@ -158,7 +158,6 @@ class HBNBCommand(cmd.Cmd):
         setattr(models.storage.all()[key],
                 commands[2], commands[3])
         models.storage.all()[key].save()
-        models.storage.save()
 
 
 if __name__ == '__main__':
