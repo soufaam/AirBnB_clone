@@ -67,3 +67,94 @@ class Test_Base_Model(unittest.TestCase):
         """
 
         self.assertTrue(issubclass(Place, BaseModel))
+
+    def test_place_id(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual("", Place.city_id)
+
+    def test_place_id(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual("", Place.city_id)
+
+    def test_user_id(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual("", Place.user_id)
+
+    def test_name(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual("", Place.name)
+
+    def test_description(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual("", Place.description)
+
+    def test_description(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual("", Place.description)
+
+    def test_number_rooms(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual(0, Place.number_rooms)
+
+    def test_number_bathrooms(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual(0, Place.number_bathrooms)
+
+    def test_max_guest(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual(0, Place.max_guest)
+
+    def test_price_by_night(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual(0, Place.price_by_night)
+
+    def test_latitude(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual(0.0, Place.latitude)
+
+    def test_longitude(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual(0.0, Place.longitude)
+
+    def test_amenity_ids(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual([], Place.amenity_ids)
