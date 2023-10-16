@@ -4,6 +4,7 @@ This is unit test for test File_storge
 """
 
 import unittest
+from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
 import datetime
 import models
@@ -82,3 +83,38 @@ class Test_FileStorage(unittest.TestCase):
         models.storage.new(base)
         dic = models.storage.all()
         self.assertTrue(dic != {})
+
+    def test__file_path(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        test_storage = FileStorage()
+        with self.assertRaises(Exception) as context:
+            file = test_storage.__file_path
+        self.assertTrue("object has no attribute " in str(context.exception))
+
+    def test__object(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        test_storage = FileStorage()
+        with self.assertRaises(Exception) as context:
+            file = test_storage.__objects
+        self.assertTrue("object has no attribute " in str(context.exception))
+
+    def test_reload(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        test_storage = FileStorage()
+
+        self.assertTrue("object has no attribute " in str(context.exception))
