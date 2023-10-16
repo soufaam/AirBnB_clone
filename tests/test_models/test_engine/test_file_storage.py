@@ -116,5 +116,5 @@ class Test_FileStorage(unittest.TestCase):
         """
 
         test_storage = FileStorage()
-
-        self.assertTrue("object has no attribute " in str(context.exception))
+        test_storage.reload()
+        self.assertTrue(test_storage.all() != {})
