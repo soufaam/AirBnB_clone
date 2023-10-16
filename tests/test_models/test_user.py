@@ -73,21 +73,19 @@ class Test_Base_Model(unittest.TestCase):
         Inequality of two different objects ids
         """
 
-    
         self.assertEqual("", User.first_name)
 
     def test_user_last_name(self):
         """
         Inequality of two different objects ids
         """
-    
+
         self.assertEqual("", User.last_name)
 
     def test_user_passowrd(self):
         """
         Inequality of two different objects ids
         """
-
 
         self.assertEqual("", User.password)
 

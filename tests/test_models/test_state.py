@@ -73,5 +73,4 @@ class Test_Base_Model(unittest.TestCase):
         Inequality of two different objects ids
         """
 
-    
         self.assertEqual("", State.name)

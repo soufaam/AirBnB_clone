@@ -69,19 +69,17 @@ class Test_Base_Model(unittest.TestCase):
 
         self.assertTrue(issubclass(Review, BaseModel))
 
-
     def test_review_text(self):
         """
         Inequality of two different objects ids
         """
-    
+
         self.assertEqual("", Review.text)
 
     def test_review_user_id(self):
         """
         Inequality of two different objects ids
         """
-
 
         self.assertEqual("", Review.user_id)
 
