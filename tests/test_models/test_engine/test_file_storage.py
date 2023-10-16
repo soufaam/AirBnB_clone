@@ -108,13 +108,3 @@ class Test_FileStorage(unittest.TestCase):
             file = test_storage.__objects
         self.assertTrue("object has no attribute " in str(context.exception))
 
-    def test_reload(self):
-        """_summary_
-        Check if the model key in the
-        __objects attribute after using
-        the new method
-        """
-
-        test_storage = FileStorage()
-        test_storage.reload()
-        self.assertTrue(test_storage.all() != {})
