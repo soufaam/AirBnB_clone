@@ -67,3 +67,17 @@ class Test_Base_Model(unittest.TestCase):
         """
 
         self.assertTrue(issubclass(City, BaseModel))
+
+    def test_city(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual('', City.name)
+
+    def test_state_id(self):
+        """
+        Inequality of two different objects ids
+        """
+
+        self.assertEqual('', City.state_id)
