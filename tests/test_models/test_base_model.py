@@ -7,6 +7,7 @@ import unittest
 from models.base_model import BaseModel
 import datetime
 import os
+import json
 from models.engine.file_storage import FileStorage
 
 
@@ -223,3 +224,17 @@ class Test_Base_Model(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             file = test_storage.__objects
         self.assertTrue("object has no attribute " in str(context.exception))
+
+    def test__save(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        base = BaseModel()
+        base.save()
+        key = f"{BaseModel.__name__}.{base.id}"
+        with open("file.json") as file:
+            data = json.load(file)
+            self.assertTrue(key in data.keys())

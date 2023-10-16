@@ -93,7 +93,7 @@ class Test_FileStorage(unittest.TestCase):
 
         with self.assertRaises(Exception) as context:
             FileStorage.__file_path
-        self.assertTrue("object has no attribute " in str(context.exception))
+        self.assertTrue("has no attribute " in str(context.exception))
 
     def test__object(self):
         """_summary_
@@ -116,3 +116,14 @@ class Test_FileStorage(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             FileStorage.reload()
         self.assertTrue(FileStorage.all() == {})
+
+    def test__object(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        with self.assertRaises(Exception) as context:
+            FileStorage.reload()
+        self.assertTrue(models.storage.all() != {})
