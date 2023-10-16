@@ -73,28 +73,27 @@ class Test_Base_Model(unittest.TestCase):
         Inequality of two different objects ids
         """
 
-        User.first_name = "ALX"
-        self.assertEqual("ALX", User.first_name)
+        User.first_name = ""
+        self.assertEqual("", User.first_name)
 
     def test_user_last_name(self):
         """
         Inequality of two different objects ids
         """
-        User.last_name = "Betty"
-        self.assertEqual("Betty", User.last_name)
+        User.last_name = ""
+        self.assertEqual("", User.last_name)
 
     def test_user_passowrd(self):
         """
         Inequality of two different objects ids
         """
 
-        User.password = "p@ssvv)rD"
-        self.assertEqual("p@ssvv)rD", User.password)
+        User.password = ""
+        self.assertEqual("", User.password)
 
     def test_user_email(self):
         """
         Inequality of two different objects ids
         """
 
-        User.email = "Betty@gmail.com"
-        self.assertEqual("Betty@gmail.com", User.email)
+        self.assertEqual("", User.email)
