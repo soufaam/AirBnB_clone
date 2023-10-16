@@ -49,7 +49,7 @@ class HBNBCommand(cmd.Cmd):
 
         if not line:
             print("** class name missing **")
-        if line not in self.classes.keys():
+        elif line not in self.classes.keys():
             print("** class doesn't exist **")
         else:
             basemodel = self.classes[line]()
