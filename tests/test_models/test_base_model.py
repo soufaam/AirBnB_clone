@@ -6,6 +6,8 @@ This is unit test for test Base model
 import unittest
 from models.base_model import BaseModel
 import datetime
+import os
+from models.engine.file_storage import FileStorage
 
 
 class Test_Base_Model(unittest.TestCase):
@@ -154,7 +156,7 @@ class Test_Base_Model(unittest.TestCase):
 ({base_model.id}) {base_model.__dict__}"
         self.assertEqual(result1, result2)
 
-    def test_base_model_save_method(self):
+    def test_base_model_save_method1(self):
         """
         Check the inequality of created_at and updated_at
         attributes after using the save(self) method
@@ -164,6 +166,16 @@ class Test_Base_Model(unittest.TestCase):
         base_model.save()
         self.assertLess(base_model.created_at.timestamp(),
                         base_model.updated_at.timestamp())
+
+    def test_base_model_save_method2(self):
+        """
+        Check the inequality of created_at and updated_at
+        attributes after using the save(self) method
+        """
+
+        base_model = BaseModel(name="ALX")
+        base_model.save()
+        self.assertTrue(os.path.isfile("file.json"))
 
     def test_base_model_iso_format(self):
         """
@@ -187,3 +199,27 @@ class Test_Base_Model(unittest.TestCase):
         dic = base_model.to_dict()
         self.assertIsNotNone(
             datetime.datetime.fromisoformat(dic['created_at']))
+
+    def test__file_path(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        test_storage = FileStorage()
+        with self.assertRaises(Exception) as context:
+            file = test_storage.__file_path
+        self.assertTrue("object has no attribute " in str(context.exception))
+
+    def test__object(self):
+        """_summary_
+        Check if the model key in the
+        __objects attribute after using
+        the new method
+        """
+
+        test_storage = FileStorage()
+        with self.assertRaises(Exception) as context:
+            file = test_storage.__objects
+        self.assertTrue("object has no attribute " in str(context.exception))
