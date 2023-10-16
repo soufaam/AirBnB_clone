@@ -193,6 +193,15 @@ class HBNBCommand(cmd.Cmd):
                     else:
                         del models.storage.all()[key]
                         models.storage.save()
+            elif '.update' in command:
+                arg_id = command.split('"')
+                if len(arg_id) == 3:
+                    key = f'{class_name}.{arg_id[1]}'
+                    if key not in models.storage.all().keys():
+                        print(f"** no instance found **")
+                    else:
+                        del models.storage.all()[key]
+                        models.storage.save()
                 else:
                     print("** instance id missing **")
             return self.emptyline()
